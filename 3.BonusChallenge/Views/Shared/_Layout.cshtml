@@ -7,15 +7,21 @@
     @Styles.Render("~/Content/css")
 </head>
 <body>
-    <div>
+    <div class="container">
+        <h1 class="page-title">@ViewBag.Title</h1>
+
+        <div class="main-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </div>
+
         @RenderBody()
     </div>
 
     @Scripts.Render("~/bundles/jquery")
-
     <script src="~/Scripts/results.js"></script>
-
     @RenderSection("scripts", required: false)
-
 </body>
 </html>
