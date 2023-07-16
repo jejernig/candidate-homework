@@ -1,0 +1,15 @@
+@model ResultsModel
+
+@{
+    ViewData["Title"] = "Harder Results";
+}
+
+<h1>Results</h1>
+
+<ul class="sortable-list">
+    @foreach (var list in Model.ResultList)
+    {
+        <li class="sortable">@string.Join(", ", list)</li>
+    }
+</ul>
+
